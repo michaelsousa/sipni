@@ -141,25 +141,6 @@ const { Bearer } = require("./get_token");
    });
  };
 
-//cpf_cns_Sipni("00043480101").then(console.log)
-//700802423158685
-//07792466248
-
-     //await get_SiPini(8, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/regiao/' + estado?.data?.record?.codigoRegiao);
-     //await get_SiPini(7, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/uf/' + residencia?.data?.record?.codigoUf);
-     //await get_SiPini(2, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/racacor/' + data['racaCor']);
-      //responseRacaCor?.data?.record?.descricao;
-
-
- function aaa(cpf_cns) {
-   return new Promise(async(resolve, reject) => {
-      dr = await get_SiPini(4, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/regiao/5');
-      console.log(dr)
-   });
- };
-
-//aaa()
-
 module.exports = { cpf_cns_Sipni };
 
 
