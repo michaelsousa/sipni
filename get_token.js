@@ -2,11 +2,11 @@ const axios = require('axios');
 
 const acesso = [
  "dGhpYWdvZXdlcnNvbkBnbWFpbC5jb206dGhpYWdvMjc=",
- "ZWxpZW5lc291c2FzanNAZ21haWwuY29tOnNtczEwMjYwMg==",
- "Y21zbWFyaWFjcmlzdGluYXJvbWFAZ21haWwuY29tOkx1aXoxMjM=",
- "ZW5mcGxtb3JlaXJhQGdtYWlsLmNvbToyMXNhdWRlcHNtYQ==",
- "YnJ1bmFwYXRyaWNpYTFAaG90bWFpbC5jb206YnJ1bmExMA==",
- "c2lybGVuZW9saXZlaXJhb2xpdmVpcmE3MTRAZ21haWwuY29tOlNhdWRlMjAyMUA=",
+// "ZWxpZW5lc291c2FzanNAZ21haWwuY29tOnNtczEwMjYwMg==",
+// "Y21zbWFyaWFjcmlzdGluYXJvbWFAZ21haWwuY29tOkx1aXoxMjM=",
+// "ZW5mcGxtb3JlaXJhQGdtYWlsLmNvbToyMXNhdWRlcHNtYQ==",
+// "YnJ1bmFwYXRyaWNpYTFAaG90bWFpbC5jb206YnJ1bmExMA==",
+// "c2lybGVuZW9saXZlaXJhb2xpdmVpcmE3MTRAZ21haWwuY29tOlNhdWRlMjAyMUA=",
 /* "Y2ludGlhc2lsdmEwMDAzQGdtYWlsLmNvbTpjaW50aWExOTk2",
  "aGVsZW5hYmVsYTc4OUBnbWFpbC5jb206SDQ0MjExNTQ4",
  "bGVpbmFkZWxpc2lvMTJAZ21haWwuY29tOnI3c2F1ZGU=",

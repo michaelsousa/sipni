@@ -3,7 +3,7 @@ const axios = require('axios');
 const { Bearer } = require("./get_token");
 
 
- async function get_SiPini(number, url) {
+ async function get_SiPini(url) {
    const { erro, token } = await Bearer();
 
    const { data, error } = await axios({
@@ -29,8 +29,8 @@ const { Bearer } = require("./get_token");
  function cpf_cns_Sipni(cpf_cns) {
    return new Promise(async(resolve, reject) => {
      let ano = new Date().getYear();
-     let { data } = cpf_cns.length == 11 ? await get_SiPini(0, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cpf/' + cpf_cns)
-      : await get_SiPini(1, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cns/' + cpf_cns);
+     let { data } = cpf_cns.length == 11 ? await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cpf/' + cpf_cns)
+      : await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cns/' + cpf_cns);
 
      if (data?.records == undefined || data.records.length == 0) return resolve({
        status: false,
@@ -59,17 +59,17 @@ const { Bearer } = require("./get_token");
      };
       data['racaCor'] = responseRacaCor[data['racaCor']] ?? "SEM INFORMAÇÃO";
 
-     const ufNascimento = await get_SiPini(3, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/municipio/' + data['nacionalidade']['municipioNascimento']);
+     const ufNascimento = await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/municipio/' + data['nacionalidade']['municipioNascimento']);
       data['nacionalidade']['municipioNascimento'] = ufNascimento?.data?.record?.nome || "";
 
-     const paisNascimento = data['nacionalidade']['paisNascimento'] == "1" ? "BRASIL" : await get_SiPini(4, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/pais/' + data['nacionalidade']['paisNascimento']);
+     const paisNascimento = data['nacionalidade']['paisNascimento'] == "1" ? "BRASIL" : await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/pais/' + data['nacionalidade']['paisNascimento']);
       data['nacionalidade']['paisNascimento'] = paisNascimento?.data?.record?.nome || paisNascimento;
                
      const residencia = data['endereco']['municipio'] == ufNascimento?.data?.record?.codigo ? ufNascimento?.data?.record?.nome
-     :  await get_SiPini(5, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/municipio/' + data['endereco']['municipio']);
+     :  await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/municipio/' + data['endereco']['municipio']);
       data['endereco']['municipio'] = residencia?.data?.record?.nome || residencia;
 
-     const pais = data['endereco']['pais'] == "1" ? "BRASIL" : await get_SiPini(6, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/pais/' + data['endereco']['pais']);
+     const pais = data['endereco']['pais'] == "1" ? "BRASIL" : await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/pais/' + data['endereco']['pais']);
       data['endereco']['pais'] = pais?.data?.record?.nome || pais;
 
      const estado = {
@@ -131,7 +131,7 @@ const { Bearer } = require("./get_token");
      };
      data['signo'] = signo(data['dataNascimento']);
 
-//     const responseCalendario = await get_SiPini(9, 'https://servicos-cloud.saude.gov.br/pni-bff/v1/calendario/cpf/' + data['cpf']);
+//     const responseCalendario = await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/calendario/cpf/' + data['cpf']);
 //     let { indigena, calendario, outrasImunizacoes, imunizacoesCampanha } = responseCalendario?.data?.record;
 //      data['vacinacao'] = {
 //        indigena, calendario, outrasImunizacoes, imunizacoesCampanha
