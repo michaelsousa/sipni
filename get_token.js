@@ -1,8 +1,9 @@
 const axios = require('axios');
 
 const acesso = [
+"ZmFiaWFuYW51bmVzMDY4QGhvdG1haWwuY29tOjA3MDk4MUZh"
 // "dGhpYWdvZXdlcnNvbkBnbWFpbC5jb206dGhpYWdvMjc=",
- "ZWxpZW5lc291c2FzanNAZ21haWwuY29tOnNtczEwMjYwMg==",
+// "ZWxpZW5lc291c2FzanNAZ21haWwuY29tOnNtczEwMjYwMg==",
 // "Y21zbWFyaWFjcmlzdGluYXJvbWFAZ21haWwuY29tOkx1aXoxMjM=",
 // "ZW5mcGxtb3JlaXJhQGdtYWlsLmNvbToyMXNhdWRlcHNtYQ==",
 // "YnJ1bmFwYXRyaWNpYTFAaG90bWFpbC5jb206YnJ1bmExMA==",
