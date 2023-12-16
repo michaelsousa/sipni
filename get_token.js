@@ -1,28 +1,29 @@
 const axios = require('axios');
 
 const acesso = [
- "enfplmoreira@gmail.com:21saudepsma",
- "thiagoewerson@gmail.com:thiago27",
- "jessicapaulino_25@hotmail.com:jessica2021",
- "lmurta007@gmail.com:Saude2021@",
- "sirleneoliveiraoliveira714@gmail.com:Saude2021@",
- "mercinha-goncalves@hotmail.com:123456VE",
- "nancyllf@hotmail.com:covid19123",
- "dr.flavioribeiro28@gmail.com:covid19",
- "mirianjuliao2011@gmail.com:covid19",
- "raissacardozofurtadobraga@gmail.com:r244818",
- "luiza.cavalcante88@gmail.com:debora123",
- "brunapatricia1@hotmail.com:bruna10",
- "andressacoliveira4@gmail.com:andressa21",
- "helenabela789@gmail.com:H44211548",
- "helenabela789@gmail.com:H44211548",
- "brunapatricia1@hotmail.com:bruna10",
- "cmsmariacristinaroma@gmail.com:Luiz123",
- "cintiasilva0003@gmail.com:cintia1996",
- "bethaniapa@gmail.com:bethania2020",
- "enfermeiraemilya@gmail.com:emi4319",
- "elienesousasjs@gmail.com:sms102602",
- "leinadelisio12@gmail.com:r7saude"
+ "dGhpYWdvZXdlcnNvbkBnbWFpbC5jb206dGhpYWdvMjc=",
+ "ZWxpZW5lc291c2FzanNAZ21haWwuY29tOnNtczEwMjYwMg==",
+ "Y21zbWFyaWFjcmlzdGluYXJvbWFAZ21haWwuY29tOkx1aXoxMjM=",
+ "ZW5mcGxtb3JlaXJhQGdtYWlsLmNvbToyMXNhdWRlcHNtYQ==",
+ "YnJ1bmFwYXRyaWNpYTFAaG90bWFpbC5jb206YnJ1bmExMA==",
+ "c2lybGVuZW9saXZlaXJhb2xpdmVpcmE3MTRAZ21haWwuY29tOlNhdWRlMjAyMUA=",
+/* "Y2ludGlhc2lsdmEwMDAzQGdtYWlsLmNvbTpjaW50aWExOTk2",
+ "aGVsZW5hYmVsYTc4OUBnbWFpbC5jb206SDQ0MjExNTQ4",
+ "bGVpbmFkZWxpc2lvMTJAZ21haWwuY29tOnI3c2F1ZGU=",
+ "bmFuY3lsbGZAaG90bWFpbC5jb206Y292aWQxOTEyMw==",
+ "bG11cnRhMDA3QGdtYWlsLmNvbTpTYXVkZTIwMjFA",
+ "bHVpemEuY2F2YWxjYW50ZTg4QGdtYWlsLmNvbTpkZWJvcmExMjM=",
+ "YnJ1bmFwYXRyaWNpYTFAaG90bWFpbC5jb206YnJ1bmExMA==",
+ "YmV0aGFuaWFwYUBnbWFpbC5jb206YmV0aGFuaWEyMDIw",
+ "bWVyY2luaGEtZ29uY2FsdmVzQGhvdG1haWwuY29tOjEyMzQ1NlZF",
+ "cmFpc3NhY2FyZG96b2Z1cnRhZG9icmFnYUBnbWFpbC5jb206cjI0NDgxOA==",
+ "bWlyaWFuanVsaWFvMjAxMUBnbWFpbC5jb206Y292aWQxOQ==",
+ "aGVsZW5hYmVsYTc4OUBnbWFpbC5jb206SDQ0MjExNTQ4",
+ "YW5kcmVzc2Fjb2xpdmVpcmE0QGdtYWlsLmNvbTphbmRyZXNzYTIx",
+ "amVzc2ljYXBhdWxpbm9fMjVAaG90bWFpbC5jb206amVzc2ljYTIwMjE=",
+ "ZHIuZmxhdmlvcmliZWlybzI4QGdtYWlsLmNvbTpjb3ZpZDE5",
+ "ZW5mZXJtZWlyYWVtaWx5YUBnbWFpbC5jb206ZW1pNDMxOQ=="
+*/
 ];
 
  async function Bearer() {
@@ -33,7 +34,7 @@ const acesso = [
      method: 'POST',
      headers: {
        'accept': 'application/json',
-       'X-Authorization': 'Basic ' + btoa(user_senha),
+       'X-Authorization': 'Basic ' + user_senha,
        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
      }
    })
