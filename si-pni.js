@@ -29,6 +29,7 @@ const { Bearer } = require("./get_token");
  function cpf_cns_Sipni(cpf_cns) {
    return new Promise(async(resolve, reject) => {
      let ano = new Date().getYear();
+     cpf_cns = cpf_cns.replace(/\D+/gi, "");
      let { data } = cpf_cns.length == 11 ? await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cpf/' + cpf_cns)
       : await get_SiPini('https://servicos-cloud.saude.gov.br/pni-bff/v1/cidadao/cns/' + cpf_cns);
 
